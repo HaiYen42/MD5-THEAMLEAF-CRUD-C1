@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edit</h1>
+<form method="post" th:action="@{/student/edit/{id}/(id=${student.id})}">
+    <label>Name</label> <br>
+    <input name="name" th:value="${student.name}">  <br>
+    <label>Address</label> <br>
+    <input name="address" th:value="${student.address}"><br>
+    <label>Age</label> <br>
+    <input name="age" th:value="${student.age}"><br>
+    <button type="submit">Edit</button>
+</form>
+</body>
+</html>
